@@ -6,14 +6,14 @@ IP_brama="$(ip route | grep via | awk '{print$3}')"
 #1
 pokaz_ip_bramy()
 {
-	echo -e "\e[35m IP Twojej bramy to: \e[0m" $IP_brama && ./nauka.sh 
+	echo -e "\e[35m IP Twojej bramy to: \e[0m" $IP_brama && ./lazy_nmap.sh 
 }
 #2
 pokaz_dostepne_cele()
 {	
 
 	echo -e "\e[35m Dostepne cele w Twojej sieci to: \e[0m"
-	sudo nmap -sP $IP_brama/24 | grep '(1' | awk '{print$5$6}'  && ./nauka.sh  
+	sudo nmap -sP $IP_brama/24 | grep '(1' | awk '{print$5$6}'  && ./lazy_nmap.sh  
 }
 #3
 pokaz_adres_MAC()
@@ -21,7 +21,7 @@ pokaz_adres_MAC()
 	echo -e "\e[35m Podaj IP celu \e[0m"
 	read cel
 	echo -e "\e[35m Adres MAC celu to: \e[0m"
-	sudo nmap -sP -P $cel |grep MAC | awk '{print$3}' && ./nauka.sh  
+	sudo nmap -sP -P $cel |grep MAC | awk '{print$3}' && ./lazy_nmap.sh  
   
 }
 #4
@@ -29,7 +29,7 @@ Pokaz_Port_ssh()
 {
 	echo -e "\e[35m Podaj IP celu \e[0m"
 	read cel
-	sudo nmap -p22 $cel  | grep 22/tcp  && ./nauka.sh
+	sudo nmap -p22 $cel  | grep 22/tcp  && ./lazy_nmap.sh
 }
 
 #5
@@ -42,7 +42,7 @@ SSH_Brute()
 	echo -e "\e[35m Podaj sciezke do slownika z haslami \e[0m" 
 	read haslo
 	sudo nmap --script ssh-brute -p22 $cel --script-args userdb=$login,passdb=$haslo
-	sudo ./nauka.sh
+	sudo ./lazy_nmap.sh
 		
 	
 }
@@ -71,7 +71,7 @@ case "$opcja" in
 
 
   "11") exit ;;
-  *)  ./nauka.sh
+  *)  ./lazy_nmap.sh
   
 esac
 
