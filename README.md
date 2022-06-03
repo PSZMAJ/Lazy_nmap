@@ -1,5 +1,5 @@
 # LazyNmap v1.0
-## Author: Przemyslaw Szmaj
+## Autor: Przemyslaw Szmaj
 ### Narzedzie automatyzujace prace nmapa.
 
 Praca z nmapem jeszcze nigdy nie byla taka prosta.
