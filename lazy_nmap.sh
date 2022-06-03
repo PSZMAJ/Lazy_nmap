@@ -6,6 +6,7 @@ IP_brama="$(ip route | grep via | awk '{print$3}')"
 #1
 pokaz_ip_bramy()
 {
+	
 	echo -e "\e[35m IP Twojej bramy to: \e[0m" $IP_brama && ./lazy_nmap.sh 
 }
 #2
@@ -43,19 +44,64 @@ SSH_Brute()
 	read haslo
 	sudo nmap --script ssh-brute -p22 $cel --script-args userdb=$login,passdb=$haslo
 	sudo ./lazy_nmap.sh
-		
 	
+}
+#6
+sV_skan()
+{
+	echo -e "\e[35m Podaj IP celu \e[0m"
+	read cel
+	clear
+	sudo nmap -sV $cel
+	sudo ./lazy_nmap.sh
+}
+#7
+O_skan()
+{
+	echo -e "\e[35m Podaj IP celu \e[0m"
+	read cel
+	clear
+	sudo nmap -O $cel | grep OS
+	sudo ./lazy_nmap.sh
+}
+#8
+Szybki_skan()
+{
+	echo -e "\e[35m Podaj IP celu \e[0m"
+	read cel
+	clear
+	sudo nmap -T5 $cel
+	sudo ./lazy_nmap.sh
+}
+Szczegolowe_info_port()
+{
+	echo -e "\e[35m Podaj IP celu \e[0m"
+	read cel
+	clear
+	echo -e "\e[35m Podaj numer portu \e[0m"
+	read port
+	clear
+	sudo nmap $cel -PO -sV -p $port
+	sudo ./lazy_nmap.sh
 }
 
 
 
 
+
+figlet -f pagga Lazy Nmap 
 echo -e "\e[31m [---------L-A-Z-Y--N-M-A-P------BY-PRZEMO---V.1-0-----------------------------]\e[0m"
+echo -e "\e[31m [ ] - Wyczysc ekran - ENTER \e[0m"
 echo -e "\e[31m [1] - Pokaz IP Bramy w Twojej sieci \e[0m"
 echo -e "\e[31m [2] - Pokaz dostepne cele - skanowanie pingiem \e[0m"
 echo -e "\e[31m [3] - Pokaz adres MAC celu- skanowanie pingiem \e[0m"
 echo -e "\e[31m [4] - Pokaz stan portu SSH \e[0m"
 echo -e "\e[31m [5] - Wykonaj atak BruteForce SSH \e[0m"
+echo -e "\e[31m [6] - Skanuj numery wersji i uslugi \e[0m"
+echo -e "\e[31m [7] - Pokaz system operacyjny hosta \e[0m"
+echo -e "\e[31m [8] - Wykonaj szybki skan hosta \e[0m"
+echo -e "\e[31m [9] - Pokaz szczegolowe informacje o konkretnym porcie \e[0m"
+
 echo -e "\e[31m [----------------------------------------------------------------------------] \e[0m"
 
 
@@ -67,11 +113,14 @@ case "$opcja" in
   "2") pokaz_dostepne_cele ;;
   "3") pokaz_adres_MAC ;;
   "4") Pokaz_Port_ssh ;;
-  "5") SSH_Brute;;
+  "5") SSH_Brute ;;
+  "6") sV_skan ;;
+  "7") O_skan ;;
+  "8") Szybki_skan ;;
+  "9") Szczegolowe_info_port ;;
 
 
-  "11") exit ;;
-  *)  ./lazy_nmap.sh
+  *) clear && ./lazy_nmap.sh
   
 esac
 
