@@ -8,8 +8,11 @@ Praca z nmapem jeszcze nigdy nie byla taka prosta.
 Używanie LazyNmap do atakowania celów bez uprzedniej wzajemnej zgody jest nielegalne. Obowiązkiem użytkownika końcowego jest przestrzeganie wszystkich obowiązujących przepisów lokalnych, stanowych i federalnych. Programiści nie ponoszą odpowiedzialności i nie ponoszą odpowiedzialności za jakiekolwiek niewłaściwe użycie lub szkody spowodowane przez ten program.
 
 ### Screenshot
-
+#### Menu
 ![Menu](https://raw.githubusercontent.com/PSZMAJ/Lazy_nmap/main/lazy_nmap.PNG "LazyNmap")
+
+#### Atak Bruteforce na SSH
+![Menu]([https://raw.githubusercontent.com/PSZMAJ/Lazy_nmap/main/lazy_nmap.PNG](https://raw.githubusercontent.com/PSZMAJ/Lazy_nmap/main/lazy_nmap_photo/brute_lazy_nmap.PNG) "LazyNmap")
 
 
 ##### Jak uzyc:
