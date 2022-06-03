@@ -9,10 +9,10 @@ Używanie LazyNmap do atakowania celów bez uprzedniej wzajemnej zgody jest niel
 
 ### Screenshot
 #### Menu
-![Alt text](https://raw.githubusercontent.com/PSZMAJ/Lazy_nmap/main/lazy_nmap.PNG "LazyNmap")
+![alt text](https://raw.githubusercontent.com/PSZMAJ/Lazy_nmap/main/lazy_nmap.PNG)
 
 #### Atak Bruteforce na SSH
-![Alt text]([https://raw.githubusercontent.com/PSZMAJ/Lazy_nmap/main/lazy_nmap_photo/brute_lazy_nmap.PNG "LazyNmap")
+![alt text]([https://raw.githubusercontent.com/PSZMAJ/Lazy_nmap/main/lazy_nmap_photo/brute_lazy_nmap.PNG)
 
 
 ##### Jak uzyc:
