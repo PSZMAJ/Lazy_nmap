@@ -84,7 +84,17 @@ Szczegolowe_info_port()
 }
 
 
-
+update()
+{
+	sudo cd ..
+	sudo rm -rI lazy_nmap
+	yes
+	git clone https://github.com/PSZMAJ/Lazy_nmap.git
+	cd lazy_nmap
+	chmod +x lazy_nmap.sh
+	echo echo -e "\e[35m Aktualizacja tool'a zakonczona \e[0m"
+	sudo ./lazy_nmap
+}
 
 
 figlet -f pagga Lazy Nmap 
@@ -99,6 +109,7 @@ echo -e "\e[31m [6] - Skanuj numery wersji i uslugi \e[0m"
 echo -e "\e[31m [7] - Pokaz system operacyjny hosta \e[0m"
 echo -e "\e[31m [8] - Wykonaj szybki skan hosta \e[0m"
 echo -e "\e[31m [9] - Pokaz szczegolowe informacje o konkretnym porcie \e[0m"
+echo -e "\e[31m [U] - Aktualizuj Lazy_Nmap \e[0m"
 
 echo -e "\e[31m [----------------------------------------------------------------------------] \e[0m"
 
@@ -116,6 +127,7 @@ case "$opcja" in
   "7") O_skan ;;
   "8") Szybki_skan ;;
   "9") Szczegolowe_info_port ;;
+  "20") update ;;
 
 
   *) clear && ./lazy_nmap.sh
