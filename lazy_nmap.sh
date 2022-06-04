@@ -93,7 +93,7 @@ echo -e "\e[31m [---------L-A-Z-Y--N-M-A-P------BY-PRZEMO---V.1-0---------------
 echo -e "\e[31m [ ] - Wyczysc ekran - ENTER \e[0m"
 echo -e "\e[31m [1] - Pokaz IP Bramy w Twojej sieci \e[0m"
 echo -e "\e[31m [2] - Pokaz dostepne cele - skanowanie pingiem \e[0m"
-echo -e "\e[31m [3] - Pokaz adres MAC celu- skanowanie pingiem \e[0m"
+echo -e "\e[31m [3] - Pokaz adres MAC celu - skanowanie pingiem \e[0m"
 echo -e "\e[31m [4] - Pokaz stan portu SSH \e[0m"
 echo -e "\e[31m [5] - Wykonaj atak BruteForce SSH \e[0m"
 echo -e "\e[31m [6] - Skanuj numery wersji i uslugi \e[0m"
