@@ -87,9 +87,9 @@ Szczegolowe_info_port()
 update()
 {
 	cd ..
-	sudo rm -rI lazy_nmap
+	sudo rm -rI Lazy_nmap
 	git clone https://github.com/PSZMAJ/Lazy_nmap.git
-	cd lazy_nmap
+	cd Lazy_nmap
 	chmod +x lazy_nmap.sh
 	echo echo -e "\e[35m Aktualizacja tool'a zakonczona \e[0m"
 	sudo ./lazy_nmap
