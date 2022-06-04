@@ -12,7 +12,7 @@ pokaz_ip_bramy()
 #2
 pokaz_dostepne_cele()
 {	
-
+	
 	echo -e "\e[35m Dostepne cele w Twojej sieci to: \e[0m"
 	sudo nmap -sP $IP_brama/24 | grep '(1' | awk '{print$5$6}'  && ./lazy_nmap.sh  
 }
@@ -38,6 +38,9 @@ SSH_Brute()
 {
 	echo -e "\e[35m Podaj IP celu \e[0m"
 	read cel
+	echo " Przykladowa sciezka do slownikow -> /usr/share/wordlists    ex. /usr/share/wordlists/rockyou.txt"
+	echo "Zawartosc katalogu wordlist"
+	ls /usr/share/wordlists
 	echo -e "\e[35m Podaj sciezke do slownika z loginami \e[0m" 
 	read login
 	echo -e "\e[35m Podaj sciezke do slownika z haslami \e[0m" 
@@ -51,7 +54,6 @@ sV_skan()
 {
 	echo -e "\e[35m Podaj IP celu \e[0m"
 	read cel
-	clear
 	sudo nmap -sV $cel
 	sudo ./lazy_nmap.sh
 }
@@ -60,7 +62,6 @@ O_skan()
 {
 	echo -e "\e[35m Podaj IP celu \e[0m"
 	read cel
-	clear
 	sudo nmap -O $cel | grep OS
 	sudo ./lazy_nmap.sh
 }
@@ -69,7 +70,6 @@ Szybki_skan()
 {
 	echo -e "\e[35m Podaj IP celu \e[0m"
 	read cel
-	clear
 	sudo nmap -T5 $cel
 	sudo ./lazy_nmap.sh
 }
@@ -77,10 +77,8 @@ Szczegolowe_info_port()
 {
 	echo -e "\e[35m Podaj IP celu \e[0m"
 	read cel
-	clear
 	echo -e "\e[35m Podaj numer portu \e[0m"
 	read port
-	clear
 	sudo nmap $cel -PO -sV -p $port
 	sudo ./lazy_nmap.sh
 }
