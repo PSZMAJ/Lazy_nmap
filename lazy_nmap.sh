@@ -89,9 +89,10 @@ update()
 	cd ..
 	sudo rm -rI Lazy_nmap
 	git clone https://github.com/PSZMAJ/Lazy_nmap.git
+	sleep 1
 	cd Lazy_nmap
 	chmod +x lazy_nmap.sh
-	echo echo -e "\e[35m Aktualizacja tool'a zakonczona \e[0m"
+	echo -e "\e[35mAktualizacja tool'a zakonczona"
 	sudo ./lazy_nmap
 }
 
