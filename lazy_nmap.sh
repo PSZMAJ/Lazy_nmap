@@ -89,6 +89,7 @@ Szczegolowe_info_port()
 
 
 figlet -f pagga Lazy Nmap 
+echo -e "\e[5m  KUP KURS NA WWW.EHAKER.PL \e[0m"
 echo -e "\e[31m [---------L-A-Z-Y--N-M-A-P------BY-PRZEMO---V.1-0-----------------------------]\e[0m"
 echo -e "\e[31m [ ] - Wyczysc ekran - ENTER \e[0m"
 echo -e "\e[31m [1] - Pokaz IP Bramy w Twojej sieci \e[0m"
